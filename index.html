@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pione project : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pione project</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/pione">View on GitHub</a>
+
+          <h1 id="project_title">Pione project</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>PIONE Project</h1>
+
+<p>PIONE is Process-rule for Input/Output Negotiation Enviromenment.</p>
+
+<p>PIONE is Process-rule for Input/Output Negotiation Enviromenment. You can write
+complex process as simple rules and run it with distributing many machines easily.</p>
+
+<p>Currently PIONE is beta version under heavy development.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>multi-agent rule system</li>
+<li>forward chain reasoning with multipule domains model as extension of production rule system</li>
+<li>task distribution according to LINDA</li>
+<li>data distribution with network file services like Dropbox</li>
+</ul><h2>System Requirements</h2>
+
+<ul>
+<li>Ruby 1.9.3 with bundler</li>
+<li>Linux or Unix-like OSs</li>
+</ul><h2>Installation</h2>
+
+<ol>
+<li>
+<p>Clone the repository from <a href="https://github.com/pione/pione.git">https://github.com/pione/pione.git</a>.</p>
+
+<p>$ git clone <a href="https://github.com/pione/pione.git">https://github.com/pione/pione.git</a></p>
+</li>
+<li>
+<p>Get some libraries.</p>
+
+<p>$ bundle install --path vender/bundle</p>
+</li>
+<li>
+<p>Add paths to pione like the flowing:</p>
+
+<p>$ cd ${PIONE_REP}
+$ export PATH=$PWD/bin:$PATH
+$ export RUBYLIB=$PWD/lib</p>
+</li>
+</ol><h2>Usage</h2>
+
+<h3>Process PIONE document on client mode</h3>
+
+<pre><code>$ pione-client example/Fib/Fib.pione
+</code></pre>
+
+<h3>Stand alone mode(client mode without brokers)</h3>
+
+<pre><code>$ pione-client example/Fib/Fib.pione --stand-alone
+</code></pre>
+
+<h3>Distribution mode</h3>
+
+<ol>
+<li>
+<p>Start brokers on machines.</p>
+
+<p>$ pione-broker</p>
+</li>
+<li>
+<p>Request process manager to process the rule document.</p>
+
+<p>$ pione-client example/Fib/Fib.pione</p>
+</li>
+</ol><h3>Help</h3>
+
+<pre><code>$ pione-client --help
+</code></pre>
+
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol><h2>Contributors</h2>
+
+<ul>
+<li>Keita Yamaguchi<a href="mailto:keita.yamaguchi@gmail.com">keita.yamaguchi@gmail.com</a>
+</li>
+</ul><h2>Licence</h2>
+
+<p>PIONE is free software distributed under MIT licence. Except the above, the
+following files are distributed under same as Ruby's(Ruby license or BSD)
+because these are patches including original codes:</p>
+
+<ul>
+<li>lib/pione/patch/drb-patch.rb</li>
+<li>lib/pione/patch/monitor-patch.rb</li>
+<li>lib/pione/patch/rinda-patch.rb</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
